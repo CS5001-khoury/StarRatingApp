@@ -223,7 +223,7 @@ While we provide tests, reminder, you should test your own code before submittin
    * basic run is correct (exit only command)
    * run with multiple adds, lists, and then exit
    * passes pep8 style checker
-3. Meets  (AG)
+3. Meets  (MG)
    * Edge Cases and additional examples added to examples in docstrings for 
      * `convert_str_movie_tuple`
      * `clean_title`
