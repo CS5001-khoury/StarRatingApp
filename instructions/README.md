@@ -149,7 +149,7 @@ Sadly, movies will not be saved, as we still need to learn how to write to files
 
 ### Where to start?
 
-1. Most of your functions can be written independently of each other (this was intentional in the design). As such, any of these functions are good starting points, and arguably the first ones you should write. Make sure to test after writing each one independently! 
+1. Most of your functions can be written independently of each other (this was intentional in the design). As such, any of these functions are good starting points, and arguably the first ones you should write. Make sure to test after writing each one independently! Also, it is good to start by adding more doctests, and first figuring out exactly what the function does.
    * `clean_title` - yes, this can be a single line function! 
    * `convert_rating`
    * `check_filter` - this is the hardest function, see the pro tip above
@@ -190,6 +190,59 @@ Looking at the coding [practice problems](https://github.com/CS5001-khoury/Resou
 others on your own to get more practice coding.  However, you need to submit at least ONE (1) 
 completed practice as its own python file (which means even if the coding practice had an online
 form to fill out like codingbat, you need to copy your solution to a python file). 
+
+## 🤖 Use of LLMs
+You should **not** use LLMs for writing your code. This is about learning the process, and without learning the process you may find it actually more difficult to generate code with LLMs. This is because the prompts for LLMs need to be exact, or they will make faulty assumptions about the code you are trying to generate (often generating incorrect test cases!). 
+
+You are free to use LLMs to help you think of edge cases  **after** you have a working function. An example prompt could be:
+
+> Please evaluate the following function focusing on these specific areas:
+>
+> 1. **Code correctness**: Does the implementation match the docstring description?
+> 2. **Docstring completeness**: Are the parameters, return value, and examples clear and accurate?
+> 3. **Edge cases**: What boundary conditions or unusual inputs could cause issues?
+>
+> For any edge cases you identify:
+> - Explain why they're problematic
+> - Show what would happen with specific input examples
+> - Suggest how to handle them (documentation or code changes)
+>
+> Focus your feedback on the most important issues first. Assume this is for a beginner programming course at week 5 of our learning. We have not covered error checking yet, 
+> nor should I include specialized statements for invalid input.
+>
+> [then paste in the single function you are looking at]
+
+As part of your learning process, another example prompt could be:
+
+
+> I am learning lists and strings in Python. We have currently covered basic operators, while loops, functions, and conditional statements. Can you take me through some examples on using lists and strings, especially focusing on slice operators, memory considerations, and string cleaning techniques? Please include practical examples that show both basic usage and common real-world applications.
+>
+> After your explanation, I want you to ask me THREE questions, but present them ONE AT A TIME. Wait for my response to each question before asking the next one.
+> 
+> **Question requirements:**
+> 1. **First question**: Test my conceptual understanding of lists and strings, including slice notation, mutability differences, and common patterns
+> 2. **Second question**: Give me a specific problem specification and ask me to write code that solves it. The problem should involve working with lists or strings and may require loops. Include hints about relevant string methods or list operations that might be useful.
+> 3. **Third question**: Present me with existing code that works with lists or strings, and ask me to analyze it for potential issues, inefficiencies, or improvements. This could include memory usage, performance, edge cases, or code readability.
+> 
+> **For question 2, evaluate my code on these criteria:**
+> - Correct syntax and proper Python conventions
+> - Appropriate loop structure (if needed) with conditions that will terminate
+> - Clear logic for updating variables and data structures
+> - Meaningful variable names and comments explaining the approach
+> - Consideration of edge cases and input validation
+> - Efficient use of Python's built-in methods and data structures
+> 
+> **For question 3, guide me to consider:**
+> - Memory efficiency and performance implications
+> - Handling of edge cases and potential errors
+> - Code readability and maintainability
+> - Whether the approach scales well with larger inputs
+> - Alternative approaches that might be more Pythonic
+> 
+> Be specific in your feedback about what works well, what's missing, and how the solution could be improved. Help me understand not just what to fix, but why certain approaches are better than others.
+
+
+
 
 ## 📝 Grading Rubric
 
